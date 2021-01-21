@@ -33,7 +33,12 @@
                   * { id: "id", label: "label" }
                  */
                 if (devices && devices.length) {
-                    var cameraId = devices[1].id;
+                    var cameraId='';
+                    if(devices.length>1){
+                        cameraId = devices[1].id;
+                       } else{
+                       cameraId = devices[0].id;
+                       }
                     // .. use this to start scanning.
                     console.log('success');
                     startScan(cameraId);
